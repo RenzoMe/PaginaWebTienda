@@ -1,0 +1,326 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="Tienda online de productos domésticos: electrodomésticos, utensilios de cocina y más.">  
+    <meta name="keywords" content="productos domésticos, tienda online, electrodomésticos, utensilios de cocina">  
+    <title>LFK Productos Domésticos</title>  
+    <style>
+        * {  
+    box-sizing: border-box;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+body {  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6;  
+}  
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+header {  
+    background: #4CAF50; /* Color de fondo del header */  
+    color: white;  
+    padding: 10px 20px;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}  
+
+img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+nav ul {  
+    list-style: none;  
+    display: flex;  
+}  
+
+nav ul li {  
+    margin-left: 20px;  
+}  
+
+nav ul li a {  
+    color: white;  
+    text-decoration: none;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+h2 {  
+    margin: 20px 0;  
+}  
+
+.grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+    gap: 20px;  
+}  
+
+article {  
+    border: 1px solid #ccc;  
+    padding: 15px;  
+    text-align: center;  
+}  
+
+article img {  
+    max-width: 100%;  
+    height: auto;  
+}  
+
+.flexbox {  
+    display: flex;  
+    justify-content: space-between;  
+    gap: 20px;  
+}  
+
+footer {  
+    background: #333;  
+    color: white;  
+    text-align: center;  
+    padding: 10px 0;  
+    position: relative;  
+    bottom: 0;  
+    width: 100%;  
+}  
+
+footer nav ul {  
+    display: flex;  
+    justify-content: center;  
+}  
+
+footer nav ul li {  
+    margin-left: 20px;  
+}  
+
+footer nav ul li a {  
+    color: white;  
+    text-decoration: none;  
+}
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+    </style>
+</head>  
+<body>  
+    <header>  
+        <div class="logo">  
+            <h1>LFK Productos Domésticos</h1>  
+        </div>  
+        <nav>  
+            <ul>  
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-box" placeholder="Buscar producto..." />
+                </div>
+
+                <li><a href="productos.html">Productos</a></li>  
+                <li><a href="../ofertas/ofertas.html">Ofertas</a></li>  
+             <li><a href="#" id="mostrarFormulario" title="Deja tu sugerencia o reclamo">Sugerencia/reclamo</a></li>
+    <section id="productos">
+
+    <div class="flexbox">
+        <!-- Tus productos aquí -->
+    </div>
+</section>
+
+
+<!-- Formulario de contacto oculto -->
+<div id="formularioContacto" class="contacto-container" style="display: none;">
+    <h2>Contacto y Reclamos</h2>
+    <form id="contactForm">
+        <!-- Etiqueta asociada correctamente -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico aquí" required>
+
+        <label for="mensaje">Sugerencia/reclamo:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+        <button type="submit">Enviar</button>
+        <button type="button" id="cerrarFormulario" class="form-toggle-button">Cerrar</button>
+    </form>
+</div>
+
+
+            </ul>  
+        </nav>  
+    </header>  
+<script type="text/javascript"> /* para las categorias del menu*/
+    document.getElementById('categoriasBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const categoriasMenu = document.getElementById('categoriasMenu');
+    categoriasMenu.classList.toggle('categorias-visible');
+});
+</script>
+    <main>  
+        <section id="productos">  
+            <h2>Nuestros Productos</h2>  
+            <div class="grid">  
+               
+                <article class="product" data-name="ventilador">  
+                    <a href="../../productos/producto9/producto9.html">
+                    <img src="../../productos/producto9/producto9.jpg" alt="Ventiladora" id="ventilador"> 
+                    </a> 
+                    <h3>Ventilador</h3>  
+                    <p>Ventilador de 3 velocidades.</p>  
+                    <p>Precio: $35.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="Lavarropas">  
+                    <a href="../../productos/producto10/producto10.html">
+                    <img src="../../productos/producto10/producto10.jpg" alt="Lavarropas">  
+                    </a>
+                    <h3>Lavarropas</h3>  
+                    <p>Lavarropas automatico.</p>  
+                    <p>Precio: $579.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="Microondas">  
+                    <a href="../../productos/producto11/producto11.html">
+                    <img src="../../productos/producto11/producto11.png" alt="Microondas">  
+                    </a>
+                    <h3>Microondas</h3>  
+                    <p>Microondas moderno.</p>  
+                    <p>Precio: $220.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="Congelador">  
+                    <a href="../../productos/producto12/producto12.html">
+                    <img src="../../productos/producto12/producto12.jpg" alt="Congelador">  
+                    </a>
+                    <h3>Congelador</h3>  
+                    <p>Congelador.</p>  
+                    <p>Precio: $655.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="cocina">  
+                    <a href="../../productos/producto13/producto13.html">
+                    <img src="../../productos/producto13/producto13.jpg" alt="Cocina">  
+                    </a>
+                    <h3>Cocina</h3>  
+                    <p>Cocina.</p>  
+                    <p>Precio: $800.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>
+
+                 <article class="product" data-name="Congelador">  
+                    <a href="../../productos/producto15/producto15.html">
+                    <img src="../../productos/producto15/producto15.jpg" alt="Procesadora">  
+                    </a>
+                    <h3></h3>  
+                    <p>Procesadora.</p>  
+                    <p>Precio: $85.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="heladera">  
+                    <a href="../../ofertas/oferta1/oferta1.html">
+                    <img src=" ../../ofertas/oferta1/oferta1.png" alt="Heladera con freezer">
+                    </a>  
+                    <h3>Heladera con freezer</h3>  
+                    <p>Oferta heladera con freezer 2 en uno.</p>  
+                    <p>Precio: $469.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="Batidora">  
+                    <a href="../../ofertas/oferta2/oferta2.html">
+                    <img src="../../ofertas/oferta2/oferta2.jpg" alt="Batidora">  
+                    </a>
+                    <h3>Batidora</h3>  
+                    <p>Batidora 4 velocidades.</p>  
+                    <p>Precio: $67.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="Licuadora">  
+                    <a href="../../ofertas/oferta3/oferta3.html">
+                    <img src="../../ofertas/oferta3/oferta3.jpg" alt="Licuadora">  
+                    </a>
+                    <h3>Licuadora</h3>  
+                    <p>Licuadora 3 velocidades.</p>  
+                    <p>Precio: $58.999</p> 
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>   
+                </article>  
+
+                <article class="product" data-name="tostadora">  
+                    <a href="../../ofertas/oferta5/oferta5.html">
+                    <img src="../../ofertas/oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article> 
+                <!-- Más productos -->  
+            </div>  
+        </section>  
+
+    <script>
+        function mostrarMensaje() {
+            alert("Producto añadido al carrito correctamente");
+        }
+    </script>
+
+
+    <footer>  
+        <p>&copy; 2024 Tienda de Productos Domésticos</p>  
+        <nav>  
+            <ul>  
+                <li><a href="#productos">Productos</a></li>  
+                <li><a href="#ofertas">Ofertas</a></li>  
+                <li><a href="#contacto">Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </footer> 
+    <script type="text/javascript">
+        document.getElementById('searchInput').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase(); // Texto del buscador en minúsculas
+    const products = document.querySelectorAll('.product'); // Selecciona todos los productos
+
+    products.forEach(product => {
+        const productName = product.getAttribute('data-name').toLowerCase(); // Nombre del producto
+        if (productName.includes(searchTerm)) {
+            product.style.display = 'block'; // Muestra productos coincidentes
+        } else {
+            product.style.display = 'none'; // Oculta los que no coinciden
+        }
+    });
+});
+
+    </script> 
+</body>  
+</html>

@@ -1,0 +1,462 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="Tienda online de productos domésticos: electrodomésticos, utensilios de cocina y más.">  
+    <meta name="keywords" content="productos domésticos, tienda online, electrodomésticos, utensilios de cocina">  
+    <a  href="prueba.html"> <title>LFK Productos Domésticos</title>  </a>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.contacto-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 600px;
+    width: 90%;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+input::placeholder, textarea::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+textarea {
+    resize: none;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+
+
+#cerrarFormulario {
+    background-color: #dc3545;
+}
+
+#cerrarFormulario:hover {
+    background-color: #c82333;
+}
+
+.form-toggle-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-toggle-button:hover {
+    background-color: #0056b3;
+}
+ 
+
+    </style>
+</head>  
+<body>  
+    <header>  
+        <div class="logo">  
+            <h1>LFK Productos Domésticos</h1>  
+        </div>  
+        <nav>  
+            <ul>  
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-box" placeholder="Buscar producto..." />
+                </div>
+            <ul>
+        <li>
+            <a href="#" id="categoriasBtn" title="categorias">Categorías</a>
+            <div id="categoriasMenu" class="categorias-hidden">
+                <ul>
+                   
+                <li><a href="categorias/electrodomesticos/electrodomesticos.html" title="Electrodomésticos">🛒 Electrodomesticos</a></li>  
+                <li><a href="categorias/cocina/cocina.html" title="Cocina">🍽️ Cocina</a></li>  
+                <li><a href="categorias/muebles/Muebles.html" title="Muebles">🛏️ Muebles</li>
+
+                </ul>
+            </div>
+        </li>
+   
+                
+                <li><a href="productos/productos.html" title="producto">Productos</a></li>  
+                <li><a href="ofertas/ofertas.html" title="ofertas">Ofertas</a></li>   
+                <li><a href="#" id="mostrarFormulario" title="Deja tu sugerencia o reclamo">Sugerencia/reclamo</a></li>
+    <section id="productos">
+
+    <div class="flexbox">
+        <!-- Tus productos aquí -->
+    </div>
+</section>
+
+
+<!-- Formulario de contacto oculto -->
+<div id="formularioContacto" class="contacto-container" style="display: none;">
+    <h2>Contacto y Reclamos</h2>
+    <form id="contactForm">
+        <!-- Etiqueta asociada correctamente -->
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" placeholder="Escribe tu nombre aquí" required>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" placeholder="Escribe tu correo electrónico aquí" required>
+
+        <label for="mensaje">Sugerencia/reclamo:</label>
+        <textarea id="mensaje" name="mensaje" rows="4" placeholder="Escribe tu mensaje aquí" required></textarea>
+
+        <button type="submit">Enviar</button>
+        <button type="button" id="cerrarFormulario" class="form-toggle-button">Cerrar</button>
+    </form>
+</div>
+
+            </ul>  
+        </nav>  
+    </header>  
+<script type="text/javascript"> /* para las categorias del menu*/
+    document.getElementById('categoriasBtn').addEventListener('click', function(event) {
+    event.preventDefault();
+    const categoriasMenu = document.getElementById('categoriasMenu');
+    categoriasMenu.classList.toggle('categorias-visible');
+});
+</script>
+    <main>  
+        <section id="productos">  
+            <h2>Nuestros Productos</h2>  
+            <div class="grid">  
+
+                <article class="product" data-name="Juego de cubiertos">  
+                    <a href="productos/producto1/producto1.html">
+                    <img src="productos/producto1/producto1.jpg" alt="Sett de cubiertos">
+                    </a>  
+                    <h3>Juego de cubiertos</h3>  
+                    <p>Juego de cubiertos, 1 docena de tenedores, cuchillos y cucharas.</p>  
+                    <p>Precio: $19.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+
+    <script>
+        function mostrarMensaje() {
+            alert("Producto añadido al carrito correctamente");
+        }
+    </script>
+                </article>  
+
+
+                <article class="product" data-name="cortinas ventana">  
+                    <a href="productos/producto2/producto2.html">
+                    <img src="productos/producto2/producto2.jpg" alt="Cortinas para ventana">  
+                    </a>
+                    <h3>Cortinas</h3>  
+                    <p>Cortinas para ventana, 2 mtrs largo x 1 ancho.</p>  
+                    <p>Precio: $18.999</p>  
+                  <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="platos">  
+                    <a href="productos/producto3/producto3.html">
+                    <img src="productos/producto3/producto3.jpg" alt="Sett de platos">  
+                    </a>
+                    <h3>Juego de platos</h3>  
+                    <p>Juego de platos, 12 unidades de platos transparentes.</p>  
+                    <p>Precio: $23.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="vasos">  
+                    <a href="productos/producto4/producto4.html">
+                    <img src="productos/producto4/producto4.jpg" alt="Sett de vasos">  
+                    </a>
+                    <h3>Juego de vasos</h3>  
+                    <p>Juego de vasos, 12 unidades de vasos transparentes de vidrio.</p>  
+                    <p>Precio: $18.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="sillas">  
+                    <a href="productos/producto5/producto5.html">
+                    <img src="productos/producto5/producto5.jpg" alt="Sett de sillas">  
+                    </a>
+                    <h3>Juego sillas</h3>  
+                    <p>Juego de sillas, 6 unidades.</p>  
+                    <p>Precio: $74.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+             
+                <article class="product" data-name="mesa comedor">  
+                    <a href="productos/producto6/producto6.html">
+                    <img src="productos/producto6/producto6.jpg" alt="Mesa de comedor">  
+                    </a>
+                    <h3>Mesa de comedor</h3>  
+                    <p>Mesa de comedor para 4 a 6 personas</p>  
+                    <p>Precio: $23.999</p>  
+                  <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="tuppers">  
+                    <a href="productos/producto7/producto7.html">
+                    <img src="productos/producto7/producto7.jpg" alt="Sett de 3 tuppers"> 
+                    </a> 
+                    <h3>Juego tuppers</h3>  
+                    <p>Juego de tuppers 3 unidades unidades.</p>  
+                    <p>Precio: $7.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                    </article>
+
+                <article class="product" data-name="sillon">  
+                    <a href="productos/producto8/producto8.html">
+                    <img src="productos/producto8/producto8.jpg" alt="Sillon" >  
+                    </a>
+                    <h3>Sillon</h3>  
+                    <p>Sillon para 4 personas.</p>  
+                    <p>Precio: $59.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article>  
+
+                <article class="product" data-name="Ventilador">  
+                    <a href="productos/producto9/producto9.html">
+                    <img src="productos/producto9/producto9.jpg" alt="Ventiladora"> 
+                    </a> 
+                    <h3>Ventilador</h3>  
+                    <p>Ventilador de 3 velocidades.</p>  
+                    <p>Precio: $35.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="lavarropas">  
+                    <a href="productos/producto10/producto10.html">
+                    <img src="productos/producto10/producto10.jpg" alt="Lavarropas">  
+                    </a>
+                    <h3>Lavarropas</h3>  
+                    <p>Lavarropas automatico.</p>  
+                    <p>Precio: $579.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+            <script type="text/javascript">
+                document.getElementById('searchInput').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase(); // Texto del buscador en minúsculas
+    const products = document.querySelectorAll('.product'); // Selecciona todos los productos
+
+    products.forEach(product => {
+        const productName = product.getAttribute('data-name').toLowerCase(); // Nombre del producto
+        if (productName.includes(searchTerm)) {
+            product.style.display = 'block'; // Muestra productos coincidentes
+        } else {
+            product.style.display = 'none'; // Oculta los que no coinciden
+        }
+    });
+});
+            </script>
+                <a href="productos/productos.html">
+                      <button class="boton-navegar">Ver mas productos...</button>
+                </a>
+                <!-- Más productos -->  
+            </div>  
+        </section>  
+
+
+
+
+
+        <section id="ofertas">  
+            <h2>Ofertas Especiales</h2>  
+            <div class="flexbox">  
+                <article class="product" data-name="heladera">  
+                    <a href="ofertas/oferta1/oferta1.html">
+                    <img src="ofertas/oferta1/oferta1.png" alt="Heladera con freezer">
+                    </a>  
+                    <h3>Heladera con freezer</h3>  
+                    <p>Oferta heladera con freezer 2 en uno.</p>  
+                    <p>Precio: $469.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article>  
+
+                <article class="product" data-name="Batidora">  
+                    <a href="ofertas/oferta2/oferta2.html">
+                    <img src="ofertas/oferta2/oferta2.jpg" alt="Batidora">  
+                    </a>
+                    <h3>Batidora</h3>  
+                    <p>Batidora 4 velocidades.</p>  
+                    <p>Precio: $67.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article> 
+
+                <article class="product" data-name="licuadora">  
+                    <a href="ofertas/oferta3/oferta3.html">
+                    <img src="ofertas/oferta3/oferta3.jpg" alt="Licuadora">  
+                    </a>
+                    <h3>Licuadora</h3>  
+                    <p>Licuadora 3 velocidades.</p>  
+                    <p>Precio: $58.999</p> 
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="sarten">  
+                    <a href="ofertas/oferta4/oferta4.html">
+                    <img src="ofertas/oferta4/oferta4.jpg" alt=" Sarten antiaderente">  
+                    </a>
+                    <h3>Sarten antiaderente</h3>  
+                    <p>Sarten antiaderente de piedra calipso.</p>  
+                    <p>Precio: $10.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="tostadora">  
+                    <a href="ofertas/oferta5/oferta5.html">
+                    <img src="ofertas/oferta5/oferta5.jpg"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                   <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+
+                <!-- Más ofertas -->  
+            </div>  
+            <br>
+            <a href="ofertas/ofertas.html">
+                      <button class="boton-navegar">Ver mas ofertas...</button>
+            </a>
+        </section>  
+ 
+
+
+
+
+        <section id="categorias">  
+            <h2>Nuestras Categorías</h2>  
+            <div class="categorias-grid">  
+                <article>  
+                    <a href="categorias/electrodomesticos/electrodomesticos.html">  
+                        <img src="electrodomesticos.jpg" alt="Electrodomésticos" class="categoria-imagen">  
+                    </a> 
+                        <h3>Electrodomésticos</h3>  
+                     
+                </article>  
+              
+                </article>  
+                <article>  
+                    <a href="categorias/cocina/cocina.html">  
+                        <img src="cocina.jpg" alt="cocina" class="categoria-imagen"> 
+                    </a>  
+                        <h3>Cocina</h3>  
+                   
+                </article>  
+                <article>  
+                    <a href="categorias/muebles/muebles.html">  
+                        <img src="muebles.jpg" alt="muebles" class="categoria-imagen"> 
+                    </a>  
+                        <h3>Muebles</h3>  
+                   
+                </article>  
+                <!-- Añadir más categorías según sea necesario -->  
+            </div>  
+        </section>  
+
+    </main>  
+
+<!--final:-->
+<script>
+
+    // Obtener elementos
+    const formulario = document.getElementById('formularioContacto');
+    const botonMostrar = document.getElementById('mostrarFormulario');
+    const botonCerrar = document.getElementById('cerrarFormulario');
+    const formularioHTML = document.getElementById('contactForm');
+
+    // Mostrar el formulario
+    botonMostrar.addEventListener('click', () => {
+        formulario.style.display = 'block'; // Muestra el formulario
+        botonMostrar.style.display = 'none'; // Oculta el botón de mostrar
+    });
+
+    // Ocultar el formulario
+    botonCerrar.addEventListener('click', () => {
+        formulario.style.display = 'none'; // Oculta el formulario
+        botonMostrar.style.display = 'inline-block'; // Muestra el botón de mostrar
+    });
+
+    // Enviar formulario
+    formularioHTML.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Tu reclamo ha sido enviado. ¡Gracias por contactarnos!');
+        formularioHTML.reset(); // Resetea el formulario
+        formulario.style.display = 'none'; // Oculta el formulario
+        botonMostrar.style.display = 'inline-block'; // Vuelve a mostrar el botón
+    });
+</script>
+    <footer>  
+        <p>&copy; 2024 Tienda de Productos Domésticos</p>  
+        <nav>  
+            <ul>  
+                <li><a href="#productos">Productos</a></li>  
+                <li><a href="#ofertas">Ofertas</a></li> 
+                <li><a href="#contacto">Categorias</a></li> 
+                <li><a href="contacto.html" >Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </footer>  
+</body>  
+</html>

@@ -1,0 +1,270 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="Detalles del Producto 1 - Tienda de Productos Domésticos">  
+    <meta name="keywords" content="producto 1, detalles, tienda online, productos domésticos">  
+    <title>Cortinas - Tienda de Productos Domésticos</title>   
+    <style>
+              * {  
+    box-sizing: border-box;  
+    margin: 0;  
+    padding: 0;  
+}  
+
+h2{  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6;  
+    display: flex;
+    justify-content: center;
+}
+main {  
+    font-family: Arial, sans-serif;  
+    line-height: 1.6;  
+    display: flex;
+    justify-content: center;
+}  
+header {  
+    background: #4CAF50; /* Color de fondo del header */  
+    color: white;  
+    padding: 10px 20px;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+}  
+
+img {
+    width: 200px;
+    height: 200px;
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            
+            justify-content: center;
+        }
+
+nav ul {  
+    list-style: none;  
+    display: flex;  
+}  
+
+nav ul li {  
+    margin-left: 20px;  
+}  
+
+nav ul li a {  
+    color: white;  
+    text-decoration: none;  
+}  
+
+main {  
+    padding: 20px;  
+}  
+
+h2 {  
+    margin: 20px 0;  
+}  
+
+.grid {  
+    display: grid;  
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));  
+    gap: 20px;  
+}  
+
+article {  
+    border: 1px solid #ccc;  
+    padding: 15px;  
+    text-align: center;  
+}  
+
+article img {  
+    max-width: 100%;  
+    height: auto;  
+}  
+
+.flexbox {  
+    display: flex;  
+    justify-content: space-between;  
+    gap: 20px;  
+}  
+
+footer {  
+    background: #333;  
+    color: white;  
+    text-align: center;  
+    padding: 10px 0;  
+    position: relative;  
+    bottom: 0;  
+    width: 100%;  
+}  
+
+footer nav ul {  
+    display: flex;  
+    justify-content: center;  
+}  
+
+footer nav ul li {  
+    margin-left: 20px;  
+}  
+
+footer nav ul li a {  
+    color: white;  
+    text-decoration: none;  
+}
+.product-carousel {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background: #fff;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+    border-radius: 10px;
+}
+
+.controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.control {
+    pointer-events: auto;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    margin: 0 10px;
+}
+
+.control:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+.boto {
+    margin-top: 15px;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+</style>
+</head>  
+<body>  
+    <header>  
+        <div class="logo">  
+            <h1>Tienda de Productos Domésticos</h1>  
+        </div>  
+        <nav>  
+            <ul>  
+                <li><a href="index.html#categorias">Categorias</a></li>  
+                <li><a href="../productos.html">Productos</a></li>  
+                <li><a href="index.html#ofertas">Ofertas</a></li>  
+                <li><a href="index.html#contacto">Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+    <main>  
+        <section>  
+            <h2>Cortinas</h2>  
+               <div class="product-carousel">
+    <div class="carousel">
+        <img src="producto2.jpg" alt="Imagen 1">
+        <img src="producto2-1.jpg" alt="Imagen 2">
+        <img src="producto2-2.jpg" alt="Imagen 3">
+    </div>
+    <div class="controls">
+        <button class="control prev">❮</button>
+        <button class="control next">❯</button>
+    </div>
+</div> 
+            <p><strong>Descripción Completa:</strong> 2 cortinas para ventana de algodón.</p>  
+            <p><strong>Precio:</strong> $18.999</p>  
+               <button class="boto" onclick="mostrarCarrito()">Añadir al carrito</button> 
+                <button class="boto" onclick="mostrarCompra()">Comprar</button>         
+                   <h3>Especificaciones Técnicas</h3>  
+            <ul>  
+                <li>Dimensiones: 2 metros largo x 1 metro ancho</li>  
+                <li>Peso: 700 grms/unidad</li>  
+                <li>Material: Algodón</li>  
+                <li>Color: Gris</li>  
+                
+            </ul>  
+        </section>  
+    </main>  
+
+    <footer>  
+        <p>&copy; 2024 Tienda de Productos Domésticos</p>  
+        <nav>  
+            <ul>  
+                <li><a href="../productos.html">Productos</a></li>  
+                <li><a href="../../ofertas/ofertas.html">Ofertas</a></li>  
+                <li><a href="index.html#contacto">Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </footer>  
+     <script type="text/javascript">
+        const carousel = document.querySelector('.product-carousel .carousel');
+const images = document.querySelectorAll('.product-carousel .carousel img');
+const prevButton = document.querySelector('.product-carousel .prev');
+const nextButton = document.querySelector('.product-carousel .next');
+
+let currentIndex = 0;
+
+function updateCarousel() {
+    const translateX = -currentIndex * 100;
+    carousel.style.transform = `translateX(${translateX}%)`;
+}
+
+nextButton.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % images.length;
+    updateCarousel();
+});
+
+prevButton.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    updateCarousel();
+});
+
+    </script>
+
+     <script>
+        function mostrarCarrito() {
+            alert("Añadido al carrito exitosamente.");
+        }
+    </script>
+     <script>
+        function mostrarCompra() {
+            alert("Compra exitosa.");
+        }
+    </script>
+</body>  
+</html>  

@@ -1,0 +1,198 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <meta name="description" content="Tienda online de productos domésticos: electrodomésticos, utensilios de cocina y más.">  
+    <meta name="keywords" content="productos domésticos, tienda online, electrodomésticos, utensilios de cocina">  
+    <title>LFK Productos Domésticos</title>  
+   <link rel="stylesheet" type="text/css" href="../estilo.css">
+   <style type="text/css">
+       .search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+button {
+    margin-top: 15px;
+    padding: 10px;
+    width: calc(50% - 10px);
+    margin-right: 10px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+}
+
+
+   </style>
+</head>  
+<body>  
+    <header>  
+        <div class="logo">  
+            <h1>LFK Productos Domésticos</h1>  
+        </div>  
+        <nav>  
+            <ul>  
+                <div class="search-container">
+                    <input type="text" id="searchInput" class="search-box" placeholder="Buscar producto..." />
+                </div>
+
+                <li><a href="../productos/productos.html">Productos</a></li>  
+                <li><a href="ofertas.html">Ofertas</a></li>  
+                <li><a href="../contacto/contacto.html">Contacto/reclamo</a></li>  
+            </ul>  
+        </nav>  
+    </header>  
+
+    <main>  
+        <section id="productos">  
+            <h2>Ofertas especiales </h2>
+            <div class="grid">  
+                <article class="product" data-name="Heladera freezer">  
+                    <a href="oferta1/oferta1.html">
+                    <img src="oferta1/oferta1.png" alt="Heladera con freezer">
+                    </a>  
+                    <h3>Heladera con freezer</h3>  
+                    <p>Oferta heladera con freezer 2 en uno.</p>  
+                    <p>Precio: $469.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="batidora">  
+                    <a href="oferta2/oferta2.html">
+                    <img src="oferta2/oferta2.jpg" alt="Batidora">  
+                    </a>
+                    <h3>Batidora</h3>  
+                    <p>Batidora 4 velocidades.</p>  
+                    <p>Precio: $67.999</p>  
+                  <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article>  
+
+                <article class="product" data-name="licuadora">  
+                    <a href="oferta3/oferta3.html">
+                    <img src="oferta3/oferta3.jpg" alt="Licuadora">  
+                    </a>
+                    <h3>Licuadora</h3>  
+                    <p>Licuadora 3 velocidades.</p>  
+                    <p>Precio: $58.999</p> 
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article>  
+
+                <article class="product" data-name="sarten">  
+                    <a href="oferta4/oferta4.html">
+                    <img src="oferta4/oferta4.jpg" alt=" Sarten antiaderente">  
+                    </a>
+                    <h3>Sarten antiaderente</h3>  
+                    <p>Sarten antiaderente de piedra calipso.</p>  
+                    <p>Precio: $10.999</p>  
+                    <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article> 
+
+                <article class="product" data-name="tostadora">  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+                <article class="product" data-name="tostadora">  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                  <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article> 
+
+                <article class="product" data-name="tostadora">  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+                <article>  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button> 
+                </article> 
+                <article>  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+                <article>  
+                    <a href="oferta5/oferta5.html">
+                    <img src="oferta5/oferta5.jpg" alt=" Tostadora de pan"> 
+                    </a> 
+                    <h3>Tostador</h3>  
+                    <p>Tostadora de pan, 3 niveles de tostado.</p>  
+                    <p>Precio: $12.999</p>  
+                     <button onclick="mostrarMensaje()">Añadir al carrito</button>
+                </article> 
+
+ <script>
+        function mostrarMensaje() {
+            alert("Producto añadido al carrito correctamente");
+        }
+    </script>
+                <!-- Más productos -->  
+            </div>  
+        </section>  
+
+
+
+    <footer>  
+        <p>&copy; 2024 Tienda de Productos Domésticos</p>  
+        <nav>  
+            <ul>  
+                <li><a href="#productos">Productos</a></li>  
+                <li><a href="#ofertas">Ofertas</a></li>  
+                <li><a href="#contacto">Contacto</a></li>  
+            </ul>  
+        </nav>  
+    </footer>  
+    <script type="text/javascript">
+        document.getElementById('searchInput').addEventListener('input', function () {
+    const searchTerm = this.value.toLowerCase(); // Texto del buscador en minúsculas
+    const products = document.querySelectorAll('.product'); // Selecciona todos los productos
+
+    products.forEach(product => {
+        const productName = product.getAttribute('data-name').toLowerCase(); // Nombre del producto
+        if (productName.includes(searchTerm)) {
+            product.style.display = 'block'; // Muestra productos coincidentes
+        } else {
+            product.style.display = 'none'; // Oculta los que no coinciden
+        }
+    });
+});
+
+    </script>
+</body>  
+</html>
